@@ -269,6 +269,7 @@
                     <tagNameFormat>release-@{project.version}</tagNameFormat>
                     <!-- Tell release:perform to stop before trying to push to a remote repository -->
                     <goals>install</goals>
+                    <releaseProfiles>release</releaseProfiles>
                 </configuration>
             </plugin>
         </plugins>
