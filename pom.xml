@@ -30,10 +30,10 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/oracle/weblogic-deploy-tooling</url>
-        <connection>scm:git:git@github.com:oracle/weblogic-deploy-tooling.git</connection>
-        <developerConnection>scm:git:git@github.com:oracle/weblogic-deploy-tooling.git</developerConnection>
-        <tag>weblogic-deploy-tooling-1.6.2</tag>
+        <url>https://github.com/robertpatrick/weblogic-deploy-tooling</url>
+        <connection>scm:git:git@github.com:robertpatrick/weblogic-deploy-tooling.git</connection>
+        <developerConnection>scm:git:git@github.com:robertpatrick/weblogic-deploy-tooling.git</developerConnection>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
