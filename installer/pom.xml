@@ -96,4 +96,45 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>io.rhpatrick.mojo</groupId>
+                        <artifactId>github-release-plugin</artifactId>
+                        <configuration>
+                            <tag>release-${project.version}</tag>
+                            <releaseName>WebLogic Deploy Tooling ${project.version}</releaseName>
+                            <draft>true</draft>
+                            <excludePreReleases>true</excludePreReleases>
+                            <FileSets>
+                                <FileSet>
+                                    <directory>${project.build.directory}</directory>
+                                    <includes>
+                                        <include>${weblogic-deploy-installer-name}.zip</include>
+                                        <include>${weblogic-deploy-installer-name}.tar.gz</include>
+                                    </includes>
+                                </FileSet>
+                            </FileSets>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>Publish-GitHub-Release-Draft</id>
+                                <goals>
+                                    <goal>release</goal>
+                                </goals>
+                                <phase>install</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
